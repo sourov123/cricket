@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("832047-icc-world-cup-trophy-2019.jpg");
+    background-size: cover;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ball {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(142, 226, 16);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation: animate 1.6s linear infinite;
+}
+
+.ball::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid #ffffff;
+    box-sizing: border-box;
+    left: -65%;
+    filter: blur(1px);
+}
+
+.ball:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid #ffffff;
+    box-sizing: border-box;
+    right: -65%;
+    filter: blur(1px);
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) translateY(-200px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(0px) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(-200px) rotate(360deg);
+    }
+}
+
+.shadow {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%, 100%);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .3);
+    z-index: -1;
+    animation: sadhow 1.5s linear infinite;
+    filter: blur(2px);
+}
+
+@keyframes sadhow {
+    0% {
+        transform: translate(-50%, 100%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, 100%) scale(.5);
+    }
+    100% {
+        transform: translate(-50%, 100%) scale(1);
+    }
+}
+
+.res {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    display: flex;
+    transform: translate(-50%)
+}
+
+h1 span {
+    width: 100%;
+    color: rgb(7, 53, 179);
+    padding: 10px 20px;
+    background-color: rgb(248, 248, 227);
+    display: table-cell;
+    box-shadow: inset 0 0 5px rgba(253, 223, 49, 0.5), 0 5px 0 rgb(40, 41, 46);
+    animation: ani .8s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        transform: translatex(0px);
+        color: rgb(95, 10, 74);
+    }
+    50% {
+        transform: translatex(-50px);
+    }
+    100% {
+        transform: translatex(0);
+        color: rgb(204, 5, 5);
+    }
+}
+
+h1 span:nth-child(1) {
+    animation-delay: .3s;
+}
+
+h1 span:nth-child(2) {
+    animation-delay: .1s;
+}
+
+h1 span:nth-child(3) {
+    animation-delay: .2s;
+}
+
+h1 span:nth-child(4) {
+    animation-delay: .3s;
+}
+
+h1 span:nth-child(5) {
+    animation-delay: .1s;
+}
+
+h1 span:nth-child(6) {
+    animation-delay: 2s;
+}
+
+h1 span:nth-child(7) {
+    animation-delay: .3s;
+}
+
+h1 span:nth-child(8) {
+    animation-delay: .1s;
+}
+
+h1 span:nth-child(9) {
+    animation-delay: .2s;
+}
+
+h1 span:nth-child(10) {
+    animation-delay: .1ms;
+}
+
+h1 span:nth-child(11) {
+    animation-delay: 3s;
+}
+
+h1 span:nth-child(12) {
+    animation-delay: .2s;
+}
